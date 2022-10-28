@@ -24,9 +24,15 @@ type eatingPlace struct {
     Id string `json:"id"`
 }
 
+type contributor struct {
+    UserId string `json:"userId"`
+}
+
 type postDetail struct {
     LargeImageUrl string `json:"largeImageUrl"`
     EatingPlace eatingPlace `json:"eatingPlace"`
+    Contributor contributor `json:"contributor"`
+    PostedTime string `json:"postedTime"`
 }
 
 func meshiteroGetUserPostDetail(post post) (postDetail, error) {
