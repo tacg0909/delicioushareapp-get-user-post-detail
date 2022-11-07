@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-    lambda.Start(meshiteroGetUserPostDetail)
+    lambda.Start(delicioushareappGetUserPostDetail)
 }
 
 type post struct {
@@ -35,7 +35,7 @@ type postDetail struct {
     PostedTime string `json:"postedTime"`
 }
 
-func meshiteroGetUserPostDetail(post post) (postDetail, error) {
+func delicioushareappGetUserPostDetail(post post) (postDetail, error) {
     db := dynamo.New(
         session.New(),
         &aws.Config{
